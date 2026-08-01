@@ -2,18 +2,18 @@
 
 ## 📖 Project Overview
 
-This project demonstrates the design and implementation of an Employee Database using MySQL Data Definition Language (DDL). It focuses on creating relational tables, applying constraints, and managing data with database operations.
+This project demonstrates the design and implementation of an Employee Database Management System using MySQL. It covers database creation, table relationships, constraints, SQL clauses, joins, window functions, and DDL operations. The project is designed to strengthen fundamental SQL and relational database concepts through practical implementation.
 
 ---
 
-## 🎯 Objective
+## 🎯 Objectives
 
-- Design an Employee Database.
-- Create relational tables.
-- Implement database constraints.
-- Establish relationships using Foreign Keys.
-- Maintain data integrity and consistency.
-- Perform DDL operations.
+- Design a relational employee database
+- Create tables with appropriate constraints
+- Implement Primary Keys and Foreign Keys
+- Maintain data integrity using SQL constraints
+- Perform DDL operations
+- Practice SQL clauses, joins, aggregate functions, and window functions
 
 ---
 
@@ -21,8 +21,8 @@ This project demonstrates the design and implementation of an Employee Database 
 
 - MySQL 8.x
 - MySQL Workbench
-- SQL (DDL)
-- GitHub
+- SQL (DDL & DML)
+- Git & GitHub
 
 ---
 
@@ -30,29 +30,35 @@ This project demonstrates the design and implementation of an Employee Database 
 
 ### Departments
 
-- `department_id` – Primary Key
-- `department_name` – NOT NULL, UNIQUE
+| Column | Description |
+|---------|-------------|
+| department_id | Primary Key |
+| department_name | NOT NULL, UNIQUE |
 
 ### Locations
 
-- `location_id` – Primary Key, AUTO_INCREMENT
-- `location_name` – NOT NULL, UNIQUE
+| Column | Description |
+|---------|-------------|
+| location_id | Primary Key, AUTO_INCREMENT |
+| location_name | NOT NULL, UNIQUE |
 
 ### Employees
 
-- `employee_id` – Primary Key
-- `employee_name` – NOT NULL
-- `gender` – CHECK ('M', 'F')
-- `age` – CHECK (age >= 18)
-- `hire_date` – DEFAULT CURRENT_DATE
-- `designation`
-- `salary`
-- `department_id` – Foreign Key
-- `location_id` – Foreign Key
+| Column | Description |
+|---------|-------------|
+| employee_id | Primary Key |
+| employee_name | NOT NULL |
+| gender | CHECK ('M','F') |
+| age | CHECK(age >=18) |
+| hire_date | DEFAULT CURRENT_DATE |
+| designation | Employee Designation |
+| salary | Employee Salary |
+| department_id | Foreign Key |
+| location_id | Foreign Key |
 
 ---
 
-## 🔗 Relationships
+## 🔗 Entity Relationship
 
 - One Department → Many Employees
 - One Location → Many Employees
@@ -71,81 +77,136 @@ This project demonstrates the design and implementation of an Employee Database 
 
 ---
 
-## 📌 DDL Commands
+## 📌 SQL Concepts Covered
 
-### CREATE
+### DDL Commands
 
-- Create Database
-- Create Tables
-- Define Relationships
+- CREATE DATABASE
+- CREATE TABLE
+- ALTER TABLE
+- RENAME TABLE
+- TRUNCATE TABLE
+- DROP TABLE
+- DROP DATABASE
 
-### ALTER
+### SQL Clauses & Operators
 
-- Add Column
-- Modify Column
-- Drop Column
-- Rename Column
+- DISTINCT
+- ALIAS (AS)
+- WHERE
+- ORDER BY
+- LIMIT
 
-### RENAME
+### Aggregate Functions
 
-- Rename Tables
+- SUM()
+- AVG()
+- MIN()
+- MAX()
+- COUNT()
 
-### TRUNCATE
+### GROUP BY & HAVING
 
-- Remove All Records
+- GROUP BY
+- HAVING
 
-### DROP
+### SQL Joins
 
-- Drop Tables
-- Drop Database
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- CROSS JOIN
+- SELF JOIN
+
+### Window Functions
+
+- RANK()
+- DENSE_RANK()
+- Running Total using SUM() OVER()
 
 ---
 
 ## 📁 Project Files
 
-- README.md
-- Employee_Database.sql
-- Documentation SQL EmployeeDB.pdf
-- Screenshots Folder
+```
+Employee-Database-Management-System/
+│
+├── README.md
+├── Employee_Database.sql
+├── Documentation SQL EmployeeDB.pdf
+├── Doc2 Clause & Operators.pdf
+└── Screenshots/
+    ├── Database Creation.png
+    ├── Departments Table.png
+    ├── Locations Table.png
+    ├── Employees Table.png
+    ├── ALTER Commands.png
+    ├── JOIN Queries.png
+    ├── Window Functions.png
+```
 
 ---
 
 ## 🚀 How to Run
 
-1. Open MySQL Workbench.
-2. Open `Employee_Database.sql`.
-3. Execute the SQL script.
-4. Verify the database and tables.
+1. Install MySQL Server and MySQL Workbench.
+2. Open MySQL Workbench.
+3. Open the `Employee_Database.sql` file.
+4. Execute the script.
+5. Verify the created database and tables.
+6. Run the SQL queries provided in the documentation.
 
 ---
 
 ## 📸 Screenshots
 
+Include screenshots of:
+
 - Database Creation
 - Departments Table
 - Locations Table
 - Employees Table
-- ALTER Command
-- RENAME Command
-- TRUNCATE Command
-- DROP Command
+- ALTER TABLE Commands
+- JOIN Queries
+- Window Function Queries
+- Query Results
 
 ---
 
 ## 📚 Documentation
 
-- Documentation SQL EmployeeDB.pdf
+This repository contains:
+
+- **Documentation SQL EmployeeDB.pdf** – Complete Employee Database documentation.
+- **Doc2 Clause & Operators.pdf** – SQL practice questions covering:
+  - DISTINCT
+  - ALIAS
+  - WHERE
+  - ORDER BY
+  - LIMIT
+  - Aggregate Functions
+  - GROUP BY
+  - HAVING
+  - INNER JOIN
+  - LEFT JOIN
+  - RIGHT JOIN
+  - CROSS JOIN
+  - SELF JOIN
+  - Window Functions
 
 ---
 
 ## 🎓 Learning Outcomes
 
+After completing this project, you will understand:
+
 - Database Design
-- SQL DDL Commands
-- Table Creation
-- Constraints
-- Foreign Keys
 - Relational Database Concepts
+- SQL DDL Commands
+- SQL Clauses
+- Aggregate Functions
+- SQL Joins
+- Window Functions
 - Data Integrity
 - Schema Management
 
@@ -159,20 +220,18 @@ Aspiring Data Analyst
 
 ### Skills
 
-- SQL
+
 - MySQL
-- Excel
-- Power BI
-- Python (Learning)
+  
 
 ---
 
 ## ⭐ Support
 
-If you found this project useful, please give it a ⭐ on GitHub.
+If you found this project useful, please consider giving it a ⭐ on GitHub.
 
 ---
 
 ## 📜 License
 
-This project is for educational and learning purposes.
+This project is created for educational and learning purposes.
